@@ -1,21 +1,25 @@
 # Issues
 
-**TODO: Add description**
+An Elixir CLI app that pulls issues from GitHub (from "Programming Elixir" by Dave Thomas)
 
-## Installation
+## Requirements
+- Erlang 24.0.1
+- Elixir 1.12.0-otp-24
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `issues` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:issues, "~> 0.1.0"}
-  ]
-end
+## Getting Started
+1. Compile the project
+```sh
+$ mix deps.get
+$ mix -S mix
+$ mix escript.build
+```
+2. Use the generated executable to query the issue tracker of your desired project
+```
+# usage: ./issues <user> <project> <issue count>
+$ ./issues elixir-lang elixir 5
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/issues](https://hexdocs.pm/issues).
-
+Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc):
+```sh
+$ mix docs
+```
